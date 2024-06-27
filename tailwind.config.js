@@ -27,11 +27,11 @@ export default {
         padding: "2rem",
         screens: {
           xs: "100%", // Custom max-width for xs screen
-          sm: "100%", // Custom max-width for sm screen
-          md: "768px", // Custom max-width for md screen
-          lg: "900px", // Custom max-width for lg screen
-          xl: "1100px", // Custom max-width for xl screen
-          "2xl": "1536px", // Custom max-width for 2xl screen
+          sm: "540px", // Custom max-width for sm screen
+          md: "720px", // Custom max-width for md screen
+          lg: "960px", // Custom max-width for lg screen
+          xl: "1140px", // Custom max-width for xl screen
+          "2xl": "1320px", // Custom max-width for 2xl screen
         },
       },
       screens: {
