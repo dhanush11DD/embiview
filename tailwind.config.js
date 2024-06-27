@@ -29,8 +29,8 @@ export default {
           xs: "100%", // Custom max-width for xs screen
           sm: "100%", // Custom max-width for sm screen
           md: "768px", // Custom max-width for md screen
-          lg: "1025px", // Custom max-width for lg screen
-          xl: "1000px", // Custom max-width for xl screen
+          lg: "900px", // Custom max-width for lg screen
+          xl: "1100px", // Custom max-width for xl screen
           "2xl": "1536px", // Custom max-width for 2xl screen
         },
       },
