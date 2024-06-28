@@ -14,8 +14,7 @@ function Footer() {
       <div className="flex flex-col md:items-start justify-center items-center gap-3 md:mb-0 mb-8">
         <img src={brandLogo} width={100} height={100} alt="logo" />
         <p className="w-full text-[#B3B3B3] font-medium leading-6 tracking-[0.32px] md:max-w-[380px] md:text-start text-center lg:block md:hidden">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna
+        Embiview offers customizable Android solutions for industrial hardware, ensuring seamless updates.
         </p>
       </div>
 
@@ -53,17 +52,16 @@ function Footer() {
         {/* New Business */}
         <div className="flex flex-col md:text-start text-center leading-9 md:font-semibold text-[#B3B3B3] tracking-[0.32px]">
           {/* Title */}
-          <p className="md:text-base  text-white uppercase">
+          <p className="md:text-base  text-white uppercase mb-2">
             New Business
           </p>
           {/* Email */}
-          <p className="md:mb-6 mb-2">embiview@gmail.com</p>
+          <p className="content-2 text-dark-text ">embiview@gmail.com</p>
+          <p className="content-2 text-dark-text ">embiview@gmail.com</p>
+          <p className="content-2 text-dark-text mb-2">embiview@gmail.com</p>
           {/* Address */}
-          <p className="md:max-w-[300px] md:mb-6 mb-2">
-            3891 Ranchview Dr. Richardson, California 62639
-          </p>
           {/* Phone */}
-          <p className="">+123 2343 2354</p>
+          <p className="max-w-[300px]">WeWork Salarpuria Magnifica, Tin Factory, 78 Old Madras Road, Mahadevapura,Banglore, Karnataka 560016</p>
         </div>
       </div>
     </div>
