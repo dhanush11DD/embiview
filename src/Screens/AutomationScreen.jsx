@@ -17,7 +17,9 @@ function AutomationScreen() {
       <TechnologySection />
       <KeyBenefits />
       <HomeExp />
-      <ContactCard contactSec={contactSec} />
+      <div className="">
+        <ContactCard contactSec={contactSec} />
+      </div>
     </>
   )
 }

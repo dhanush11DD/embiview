@@ -14,7 +14,7 @@ export default {
         secondary: "#101722",
         white: "#FFFFFF",
         "dark-text": "#BCBFC3",
-        "light-text": "#79818B",
+        "light-text": "#4B5162",
         "light-heading": "#253241",
       },
       fontFamily: {
@@ -45,8 +45,8 @@ export default {
       backgroundImage: {
         "radial-gradient":
           "radial-gradient(50% 50% at 50% 50%, #213B63 0%, #101722 100%)",
-        "primary-gradient":
-          "linear-gradient(156deg, #0F1329 14.48%, #00050D 83.55%)",
+        "glass-gradient":
+          " linear-gradient(93deg, rgba(255, 255, 255, 0.08) 6.01%, rgba(255, 255, 255, 0.17) 90.83%)",
       },
     },
   },

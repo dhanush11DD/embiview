@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react'
 function TechnologySection() {
   return (
     <section className="container-fluid  py-24">
-        <div className="container flex flex-col lg:flex-row gap-14 justify-between">
+        <div className="container flex flex-col-reverse lg:flex-row gap-14 justify-between">
             <div className="flex-1">
                 <div className="mb-11">
                     <p className="blue-heading">{technology.blueHead}</p>
@@ -30,9 +30,9 @@ function TechnologySection() {
                     }
                 </div>
             </div>
-            <div className="flex-1">
-                <div className="max-w-[600px] self-end">
-                <img src={technologyImg} alt="" className="" /> 
+            <div className="flex-1 self-end">
+                <div className="max-w-[600px] h-full">
+                    <img src={technologyImg} alt="" className="" /> 
                 </div>    
             </div>
 
