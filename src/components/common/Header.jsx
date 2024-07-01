@@ -55,8 +55,8 @@ function Header() {
       <HeroGradingBottom1 />
       <HeroGradingBottom2 />
       <header
-      className={`container-fluid bg-transparent text-white lg:py-8 py-4 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
-        scrollUp ? "translate-y-0 bg-secondary" : "-translate-y-full bg-transparent"
+      className={`container-fluid  text-white lg:py-8 py-4 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        scrollUp ? "translate-y-0 bg-secondary" : "-translate-y-full"
       }`}
     >
       {/* responsive nav items */}
