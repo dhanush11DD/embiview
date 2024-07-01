@@ -1,5 +1,5 @@
-import { heroImg } from "../../assets/automation";
-import { heroContent } from "../../constants/automation.jsx";
+import { heroCareer } from "../../assets/career";
+import { heroContent } from "../../constants/career";
 import { Icon } from "@iconify/react";
 import { Header } from "../../components/common";
 import Section from "../../layout/Section";
@@ -27,7 +27,7 @@ function HeroSection() {
             animate="visible"
             variants={leftContentVariant}
             transition={{ duration: 2 }}
-            className="lg:w-[50%] w-full flex-col flex items-center lg:items-start justify-center gap-3 md:gap-8"
+            className="flex-1 w-full flex-col flex items-center lg:items-start justify-center gap-3 md:gap-8"
           >
             <h1 className="heading-xl">{heroContent.mainContent}</h1>
             <p className="heading-md text-dark-text mb-6  text-center lg:text-start">
@@ -48,10 +48,10 @@ function HeroSection() {
             animate="visible"
             variants={rightContentVariant}
             transition={{ duration: 2 }}
-            className="lg:w-[50%] w-full"
+            className="flex-1 w-full"
           >
-            <div className="">
-              <img src={heroImg} alt="Home automation" className="w-full" />
+            <div className="max-w-[490px] mx-auto py-6">
+              <img src={heroCareer} alt="Home automation" className="w-full" />
             </div>
           </motion.div>
           <div className="">

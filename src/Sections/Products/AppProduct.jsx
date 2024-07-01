@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { securityFeatures  } from "../../constants/products.jsx";
+import { securityFeatures } from "../../constants/products";
 import Container from "../../layout/Container";
 import Section from "../../layout/Section";
 

@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
-import {AutomationScreen, HomeScreen, ProductScreen} from './Screens';
+import {AboutScreen, AutomationScreen, CareerScreen, HomeScreen, IVIScreen, ProductScreen} from './Screens';
 import { Footer } from './components/common';
 import ScrollToTop from './utils/ScrollToTop';
 
@@ -10,9 +10,12 @@ function App() {
     <>
     <ScrollToTop>
       <Routes>
-        <Route path='/' element={<AutomationScreen />} />
-        {/* <Route path='/automation' element={<AutomationScreen />} />
-        <Route path='/products' element={<ProductScreen />} /> */}
+        <Route path='/' element={<HomeScreen />} />
+        <Route path='/automation' element={<AutomationScreen />} />
+        <Route path='/products' element={<ProductScreen />} />
+        <Route path='/about' element={<AboutScreen />} />
+        <Route path='/career' element={<CareerScreen />} />
+        <Route path='/ivi' element={<IVIScreen />} />
       </Routes>
       <Footer />
     </ScrollToTop>

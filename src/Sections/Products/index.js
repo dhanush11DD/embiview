@@ -4,7 +4,7 @@ import OTAProduct from "./OTAProduct";
 import TechProduct from "./TechProduct";
 import AppProduct from "./AppProduct";
 import HardwareProduct from "./HardwareProduct";
-import ScrollProduct from "./ScrollProduct2";
+import ScrollProduct from "./ScrollProduct3";
 export {
     HeroProduct,
     SmartProduct,

@@ -1,5 +1,5 @@
 import DragonBoard from './dg-board.png'
-import RbPi from './rb-pi.png'
+import RbPi from './rpi.png'
 import rockPi from './rock-pi.png'
 import nxp from './nxp.png'
 import hero1 from './hero-1.png'
@@ -11,7 +11,8 @@ import smartLive2 from './smart-live-2.png'
 import smartLive3 from './smart-live-3.png'
 import smartHome from './smartHome.svg'
 import retail from './Retail.svg'
+import AndroidVid from './android-vid.mp4'
 import healthcare from './HealthCare.svg'
 import Ev from './Ev.svg'
 
-export {DragonBoard,RbPi,rockPi,nxp,hero1,hero2,osBaner,smartLive1,smartLive2,smartLive3,homeFeatures,smartHome,retail,healthcare,Ev}
+export {DragonBoard,RbPi,AndroidVid,rockPi,nxp,hero1,hero2,osBaner,smartLive1,smartLive2,smartLive3,homeFeatures,smartHome,retail,healthcare,Ev}

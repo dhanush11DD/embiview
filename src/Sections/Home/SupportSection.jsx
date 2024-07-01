@@ -5,8 +5,8 @@ import { supportedHardware } from "../../constants/home.jsx";
 function SupportSection() {
   return (
     <section className="container-fluid  bg-secondary py-24">
-      <div className="container flex justify-between flex-col lg:flex-row gap-40">
-        <div className="flex-1 p-10  flex items-center">
+      <div className="container flex justify-between flex-col lg:flex-row gap-8 lg:gap-40">
+        <div className="flex-1 p-2 md:p-10  flex items-center">
           <div className="flex flex-col gap-3">
             <p className="blue-heading ">{supportedHardware.blueHead}</p>
             <h2 className="heading-lg text-white   w-full">{supportedHardware.heading}</h2>
@@ -20,14 +20,14 @@ function SupportSection() {
           </button>
           </div>
         </div>
-        <div className="flex-1 grid grid-cols-2 gap-8 text-white">
+        <div className="flex-1 grid grid-cols-2 gap-3 md:gap-8 text-white">
           {
             supportedHardware.gridContent.map((content, index) => (
-              <div className=" text-center aspect-square flex flex-col justify-center gap-8 items-center border border-[#2E3B4C] rounded-3xl p-7 bg-radial-gradient">
+              <div className=" text-center aspect-square flex flex-col justify-center gap-8 items-center border border-[#2E3B4C] rounded-xl md:rounded-3xl p-7 bg-radial-gradient">
                 <div className="max-w-[170px]">
                     <img src={content.img} alt="" className="" />
                 </div>
-                <p className="text-default w-full lg:w-[80%]">{content.content}</p>
+                <p className="text-base -my-5 mx-auto  lg:my-0 w-full text-center">{content.content}</p>
               </div>
             ))
           }

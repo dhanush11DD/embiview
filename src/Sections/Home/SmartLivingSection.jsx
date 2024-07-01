@@ -6,15 +6,15 @@ import { Link } from "react-router-dom"
 function SmartLivingSection() {
   return (
     <section className="container-fluid  bg-secondary py-24">
-      <div className="container flex justify-between flex-col lg:flex-row gap-40">
-        <div className="flex-1 p-10  flex items-center">
+      <div className="container flex justify-between flex-col lg:flex-row gap-12 lg:gap-40">
+        <div className="flex-1 lg:p-10 text-center lg:text-start flex items-center">
           <div className="flex flex-col gap-3">
             <p className="blue-heading ">{smartLiving.blueHead}</p> 
             <h2 className="heading-lg text-white   w-full">{smartLiving.heading}</h2>
             <p className="content-2 text-dark-text">{smartLiving.content}</p>
             <p className="content-2 text-dark-text pb-5">{smartLiving.consten2}</p>
             <Link to='/automation'>
-            <button className="btn  btn-hover text-white btn-outline flex gap-3 group w-fit">
+            <button className="btn  btn-hover mx-auto lg:mx-0 text-white btn-outline flex gap-3 group w-fit">
             <p className="">Explore More</p>
             <Icon
               icon="heroicons:arrow-up-16-solid"

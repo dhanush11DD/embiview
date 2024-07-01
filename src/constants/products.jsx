@@ -293,6 +293,7 @@ const contactSec = {
 
 
 export {
+  heroContent,
   customization,
   services,
   securityFeatures,

@@ -1,4 +1,23 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+// image flip start
+const Myclass = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".my-rotate-y-180": {
+      transform: "rotateY(180deg)",
+    },
+    ".preserve-3d": {
+      transformStyle: "preserve-3d",
+    },
+    ".perspective": {
+      perspective: "1000px",
+    },
+    ".backface-hidden": {
+      backfaceVisibility: "hidden",
+    },
+  });
+});
+// image flip end
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -14,7 +33,7 @@ export default {
         secondary: "#101722",
         white: "#FFFFFF",
         "dark-text": "#BCBFC3",
-        "light-text": "#4B5162",
+        "light-text": "#6F7481",
         "light-heading": "#253241",
       },
       fontFamily: {
@@ -50,5 +69,5 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"),Myclass],
 };
