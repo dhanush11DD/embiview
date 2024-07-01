@@ -16,7 +16,7 @@ function SpecializeSection() {
                                 <img src={item.icon} alt="" className="w-full h-full" />
                             </div>
                             <h3 className="heading-sm lg:heading-md text-light-heading pb-3">{item.title}</h3>
-                            <p className="content-2 text-light-text">{item.content}</p>
+                            <p className="md:text-[1.125rem] text-sm font-normal lg:leading-[35px] leading-6 tracking-[0.35px] text-center text-light-text">{item.content}</p>
                         </div>
                     ))
                 }

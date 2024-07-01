@@ -56,9 +56,9 @@ function Footer() {
             New Business
           </p>
           {/* Email */}
-          <p className="content-2 text-dark-text ">embiview@gmail.com</p>
-          <p className="content-2 text-dark-text ">embiview@gmail.com</p>
-          <p className="content-2 text-dark-text mb-2">embiview@gmail.com</p>
+          <p className="content-2 text-dark-text ">contactus@embiview.com</p>
+          <p className="content-2 text-dark-text ">admin@embiview.com</p>
+          <p className="content-2 text-dark-text mb-2">hr@embiview.com</p>
           {/* Address */}
           {/* Phone */}
           <p className="max-w-[300px]">WeWork Salarpuria Magnifica, Tin Factory, 78 Old Madras Road, Mahadevapura,Banglore, Karnataka 560016</p>

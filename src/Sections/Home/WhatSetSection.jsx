@@ -9,7 +9,7 @@ function WhatSetSection() {
         <div className="w-full lg:w-[60%]">
           <div className="flex flex-col gap-2 pb-6 lg:pb-16">
             <p className="blue-heading ">{whatSets.blueHead}</p>
-            <h2 className="heading-lg text-light-heading xl:w-[70%] lg:w-[80%] w-full">
+            <h2 className="heading-lg text-light-heading  w-full">
               {whatSets.heading}
             </h2>
           </div>
@@ -27,7 +27,7 @@ function WhatSetSection() {
             ))}
           </div>
         </div>
-        <div className="w-full lg:w-[40%] h-full self-end">
+        <div className="w-full lg:w-[40%] h-full self-center">
           <div className="border  border-gray-400 text-white rounded-3xl relative">
             <video autoPlay loop muted playsInline className="rounded-3xl">
               <source src={AndroidVid}  />
