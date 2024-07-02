@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { RbPi } from "../../assets/home";
 import { supportedHardware } from "../../constants/home.jsx";
+import { Link } from "react-router-dom";
 
 function SupportSection() {
   return (
@@ -11,6 +12,7 @@ function SupportSection() {
             <p className="blue-heading ">{supportedHardware.blueHead}</p>
             <h2 className="heading-lg text-white   w-full">{supportedHardware.heading}</h2>
             <p className="content-2 text-dark-text pb-5">{supportedHardware.content}</p>
+            <Link to="/products" >
             <button className="btn btn-hover text-white btn-outline flex gap-3 group w-fit">
             <p className="">View All</p>
             <Icon
@@ -18,6 +20,7 @@ function SupportSection() {
               className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
             />
           </button>
+            </Link>
           </div>
         </div>
         <div className="flex-1 grid grid-cols-2 gap-3 md:gap-8 text-white">

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import emailjs from '@emailjs/browser';
-import { applicationImg } from "../../assets/career";
-import { application } from "../../constants/career";
+import { contactApp } from "../../assets/career";
+import { application } from "../../constants/contact";
 import Container from "../../layout/Container";
 import Section from "../../layout/Section";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -14,7 +14,7 @@ function CareerFormSection() {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_bcfn07v', 'template_8j84yal', form.current, {
+      .sendForm('service_bcfn07v', 'template_nmbcr41', form.current, {
         publicKey: 'v2ZvBGbh4PNTlwJvw',
       })
       .then(
@@ -22,7 +22,7 @@ function CareerFormSection() {
          alert('SUCCESS!');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          alert('FAILED...', error.text);
         },
       );
   };
@@ -33,7 +33,7 @@ function CareerFormSection() {
         <div className="flex flex-col col-span-1 lg:flex-row gap-16">
           <div className="flex-1 flex flex-col gap-4">
             <div className="max-w-[380px] mx-auto">
-              <img src={applicationImg} alt="applicationImg" className="" />
+              <img src={contactApp} alt="applicationImg" className="" />
             </div>
             <div className="flex items-start justify-start text-light-text gap-4 py-6">
               <div className="text-primary text-2xl">
@@ -67,8 +67,8 @@ function CareerFormSection() {
                 <label htmlFor="text-default">First Name</label>
                 <input
                   type="text"
-                  name="first_name"
                   placeholder="Enter First Name"
+                  name="firstName"
                   className="border py-3  px-4 rounded-md "
                 />
               </div>
@@ -76,7 +76,7 @@ function CareerFormSection() {
                 <label htmlFor="text-default">Last Name</label>
                 <input
                   type="text"
-                  name="last_name"
+                  name="lastName"
                   placeholder="Enter Last Name"
                   className="border py-3  px-4 rounded-md "
                 />
@@ -99,37 +99,9 @@ function CareerFormSection() {
                   className="border py-3  px-4 rounded-md "
                 />
               </div>
-              <div className="flex flex-col col-span-12 md:col-span-12 gap-2 ">
-                <label htmlFor="text-default">Address</label>
-                <input
-                  type="text"
-                  name="address"
-                  placeholder="Enter Address"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-
-              <div className="flex flex-col col-span-12 md:col-span-6 gap-2">
-                <label htmlFor="text-default">First Job Position</label>
-                <input
-                  type="text"
-                  name="first_job_position"
-                  placeholder="Enter Job Position"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-              <div className="flex flex-col col-span-12 md:col-span-6 gap-2">
-                <label htmlFor="text-default">Resume</label>
-                <input
-                  type="file"
-                  name="uploads"
-                  placeholder="Enter Resume"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
 
               <div className="flex flex-col col-span-12 md:col-span-12 gap-2">
-                <label htmlFor="text-default">Message (Optional)</label>
+                <label htmlFor="text-default">Message </label>
                 <textarea
                   name="message"
                   placeholder="Enter Your Message"
@@ -143,7 +115,7 @@ function CareerFormSection() {
               <div className="md:col-span-12 col-span-12 md:ml-auto ">
                 <button type="submit" className="btn btn-hover mt-10 md:mb-6 btn-outline flex gap-3 lg:mx-0   group">
                   <p className="text-secondary group-hover:text-white">
-                    Send Your Application
+                    Send Message
                   </p>
                   <Icon
                     icon="heroicons:arrow-up-16-solid"

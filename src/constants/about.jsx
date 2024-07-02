@@ -61,7 +61,7 @@ const connecting = {
   listContent: [
     {
       icon: (
-        <Icon icon="mdi:home-thermometer" className="text-4xl" />
+        <Icon icon="ri:dashboard-2-line" className="text-4xl" />
       ),
       title: "Energy Consumption Dashboard",
       content:
@@ -74,13 +74,13 @@ const connecting = {
         "Control devices from one centralized user-friendly interface, simplifying updates, monitoring, and maintenance.",
     },
     {
-      icon: <Icon icon="mdi:shield-home" className="text-4xl" />,
+      icon: <Icon icon="iconoir:voice" className="text-4xl" />,
       title: "Voice Control and AI Integration",
       content:
         "Enable seamless hands-free control & AI-driven automation through voice integration, enhancing convenience to manage your smart devices.",
     },
     {
-      icon: <Icon icon="mdi:update" className="text-4xl" />,
+      icon: <Icon icon="material-symbols-light:view-in-ar" className="text-4xl" />,
       title: "AR/VR Solutions",
       content:
         "Develop cutting-edge AR/VR solutions to significantly elevate user experiences and engagement.",

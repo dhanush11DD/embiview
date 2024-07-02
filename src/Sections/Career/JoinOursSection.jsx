@@ -28,7 +28,7 @@ function JoinOursSection() {
                                     <div
                                         key={index}
                                         className="flex items-start gap-4">
-                                        <div className="text-primary text-2xl">
+                                        <div className="text-primary text-2xl mt-2">
                                             <Icon icon="teenyicons:tick-circle-solid" />
                                         </div>
                                         <div className="text-dark-text">

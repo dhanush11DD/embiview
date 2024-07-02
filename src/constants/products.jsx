@@ -291,6 +291,43 @@ const contactSec = {
     "Explore how we can tailor an Android OS solution to elevate your embedded systems today.",
 };
 
+const faq = {
+  heading:'Frequently asked questions',
+  content:'Explore our frequently asked questions to learn more about Embiview’s features and more.',
+  query:[
+    {
+      heading:'What is EMBIVIEW and what services do you offer?',
+      answer:'in providing custom embedded AOSP solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+       active:1
+    },
+    {
+      heading:'How does the AI-driven predictive analytics feature work?',
+      answer:' custom embedded AOSP solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+       active:2
+    },
+    {
+      heading:'Is my data secure with Neuros?',
+      answer:'embedded AOSP solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+       active:3
+    },
+    {
+      heading:'Can I integrate Neuros with other tools and platforms I currently use?',
+      answer:'solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+       active:4
+    },
+    {
+      heading:'Can I integrate Neuros with other tools and platforms I currently use?',
+      answer:'solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+       active:4
+    },
+    {
+      heading:'Can I integrate Neuros with other tools and platforms I currently use?',
+      answer:'solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+       active:4
+    },
+  ]
+}
+
 
 export {
   heroContent,
@@ -301,4 +338,5 @@ export {
   faqs,
   contactSec,
   content,
+  faq
 };

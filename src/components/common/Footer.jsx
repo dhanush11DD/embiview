@@ -68,7 +68,7 @@ function Footer() {
     {/* bottom */}
     <div className="h-auto w-full flex lg:flex-row flex-col justify-between items-center lg:text-start text-center font-semibold md:text-base text-[11px] text-white  leading-7 tracking-[0.2px]">
       {/* Copyright */}
-      <div>© 2024 Embiview. All Rights Reserved by Embiview Pvt Ltd.</div>
+      <div>Copyright © 2024 Embiview. All rights reserved</div>
 
       {/* Legal */}
       <div className="flex gap-2">

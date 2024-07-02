@@ -59,6 +59,16 @@ const features = {
   heading: "Our Key Benefits",
   listContent: [
     {
+      title: "Android Framework",
+      content:
+        "Develop robust Android frameworks for system and user applications. Enhance functionality and user experience with versatile solutions.",
+    },
+    {
+      title: "OTA updates and automation ",
+      content:
+        "Upgrade your living space with hassle-free smart home automation for enhanced convenience, comfort, and efficiency.",
+    },
+    {
       title: "Linux Kernal",
       content:
         "Specializing in solutions, we provide drivers for camera, multimedia, and voice control features, ensuring seamless integration.",
@@ -67,16 +77,6 @@ const features = {
       title: "Security and Safety",
       content:
         "Safeguard your systems with ISO 21434 cybersecurity and GDPR compliance, alongside ISO 26262 functional safety standards.",
-    },
-    {
-      title: "OTA updates and automation ",
-      content:
-        "Upgrade your living space with hassle-free smart home automation for enhanced convenience, comfort, and efficiency.",
-    },
-    {
-      title: "Android Framework",
-      content:
-        "Develop robust Android frameworks for system and user applications. Enhance functionality and user experience with versatile solutions.",
     },
   ],
 };
@@ -92,13 +92,13 @@ const specialize = {
         "Revolutionizing living spaces with cutting-edge smart solutions that enhance convenience, security, and energy efficiency.",
     },
     {
-      icon: retail,
+      icon: healthcare,
       title: "Health Care",
       content:
         "Empowering healthcare professionals with transformative technologies to improve patient care and drive better outcomes. ",
     },
     {
-      icon: healthcare,
+      icon: retail,
       title: "Retail",
       content:
         "Transforming the retail landscape with innovative digital solutions to enhance customer experiences and drive business growth. ",

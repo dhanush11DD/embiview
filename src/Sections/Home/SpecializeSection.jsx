@@ -2,7 +2,7 @@ import { specialize } from "../../constants/home.jsx"
 
 function SpecializeSection() {
   return (
-    <section className="container-fluied  py-24">
+    <section className="container-fluied py-24">
       <div className="container text-light-text ">
         <div className="text-center lg:text-start">
             <p className="blue-heading">{specialize.blueHead}</p>

@@ -3,6 +3,7 @@ import Section from "../../layout/Section";
 import Container from "../../layout/Container";
 import { Icon } from "@iconify/react";
 import contactImg from "../../assets/contact-card.png";
+import { Link } from "react-router-dom";
 
 const listArr = [
   {
@@ -11,12 +12,12 @@ const listArr = [
     content: "Begin exploring Embiview’s full suite of features immediately",
   },
   {
-    icon: <Icon icon="bx:support" />,
+    icon: <Icon icon="icon-park-outline:workbench" />,
     title: "Quality",
     content: "Reliability you can count on with seamless performance.",
   },
   {
-    icon: <Icon icon="icon-park-outline:workbench" />,
+    icon:<Icon icon="bx:support" /> ,
     title: "Dedicated Support",
     content: "Our team is here to assist you every step of the way.",
   }
@@ -33,6 +34,7 @@ function ContactCard({ contactSec }) {
           <div className="flex flex-col">
             <h2 className="heading-lg">{contactSec.heading}</h2>
             <p className="content-2 text-dark-text">{contactSec.content}</p>
+            <Link to="/contact" >
             <button className="btn bg-glass-gradient mt-10 text-white w-fit flex gap-3   group">
               <p className="">Let’s Connect</p>
               <Icon
@@ -40,6 +42,7 @@ function ContactCard({ contactSec }) {
                 className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
               />
             </button>
+            </Link>
           </div>
 
         </div>

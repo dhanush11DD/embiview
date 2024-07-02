@@ -19,14 +19,14 @@ const techProductData = [
   },
   {
     id: 3,
-    icon: "ion:hardware-chip-outline",
+    icon: "ic:outline-tips-and-updates",
     title: "Reliable Updates and Maintenance",
     description:
       "OS updates and maintenance for secure, up-to-date, and reliable devices.",
   },
   {
     id: 4,
-    icon: "ic:outline-tips-and-updates",
+    icon: "ion:hardware-chip-outline",
     title: "Advanced Hardware Integration",
     description:
       "Hardware specialization for optimal device performance and integration.",
