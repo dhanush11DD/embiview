@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 // image flip start
 const Myclass = plugin(function ({ addUtilities }) {
   addUtilities({
@@ -18,10 +22,25 @@ const Myclass = plugin(function ({ addUtilities }) {
   });
 });
 // image flip end
-export default {
+
+const addVariablesForColors = plugin(function ({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+});
+
+module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+      },
       flex: {
         2: "2 2 0%",
         3: "3 3 0%",
@@ -65,9 +84,9 @@ export default {
         "radial-gradient":
           "radial-gradient(50% 50% at 50% 50%, #213B63 0%, #101722 100%)",
         "glass-gradient":
-          " linear-gradient(93deg, rgba(255, 255, 255, 0.08) 6.01%, rgba(255, 255, 255, 0.17) 90.83%)",
+          "linear-gradient(93deg, rgba(255, 255, 255, 0.08) 6.01%, rgba(255, 255, 255, 0.17) 90.83%)",
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"),Myclass],
+  plugins: [require("@tailwindcss/typography"), Myclass, addVariablesForColors],
 };

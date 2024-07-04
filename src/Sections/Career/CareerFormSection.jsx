@@ -1,31 +1,94 @@
 import { useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { applicationImg } from "../../assets/career";
 import { application } from "../../constants/career";
 import Container from "../../layout/Container";
 import Section from "../../layout/Section";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import PropTypes from "prop-types";
+import { cn } from "../../utils/cn.js";
+import { Input } from "../../components/animation/text/input.jsx";
+import { TextArea } from "../../components/animation/text/textarea.jsx";
 
 function CareerFormSection() {
-
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_bcfn07v', 'template_8j84yal', form.current, {
-        publicKey: 'v2ZvBGbh4PNTlwJvw',
+      .sendForm("service_bcfn07v", "template_8j84yal", form.current, {
+        publicKey: "v2ZvBGbh4PNTlwJvw",
       })
       .then(
         () => {
-         alert('SUCCESS!');
+          alert("SUCCESS!");
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          console.log("FAILED...", error.text);
+        }
       );
   };
+
+  // Form configuration object
+  const formConfig = [
+    {
+      label: "First Name",
+      type: "text",
+      name: "first_name",
+      placeholder: "Enter First Name",
+      className: "col-span-12 md:col-span-6",
+    },
+    {
+      label: "Last Name",
+      type: "text",
+      name: "last_name",
+      placeholder: "Enter Last Name",
+      className: "col-span-12 md:col-span-6",
+    },
+    {
+      label: "Email Address",
+      type: "email",
+      name: "email",
+      placeholder: "Enter Email Address",
+      className: "col-span-12 md:col-span-6",
+    },
+    {
+      label: "Mobile Number",
+      type: "text",
+      name: "mobile",
+      placeholder: "Enter Mobile Number",
+      className: "col-span-12 md:col-span-6",
+    },
+    {
+      label: "Address",
+      type: "text",
+      name: "address",
+      placeholder: "Enter Address",
+      className: "col-span-12",
+    },
+    {
+      label: "First Job Position",
+      type: "text",
+      name: "first_job_position",
+      placeholder: "Enter Job Position",
+      className: "col-span-12 md:col-span-6",
+    },
+    {
+      label: "Resume",
+      type: "file",
+      name: "uploads",
+      placeholder: "Enter Resume",
+      className: "col-span-12 md:col-span-6",
+    },
+    {
+      label: "Message (Optional)",
+      type: "textarea",
+      name: "message",
+      placeholder: "Enter Your Message",
+      className: "col-span-12",
+    },
+  ];
 
   return (
     <Section isBlack={false} className="">
@@ -36,14 +99,14 @@ function CareerFormSection() {
               <img src={applicationImg} alt="applicationImg" className="" />
             </div>
             <div className="flex items-start justify-start text-light-text gap-4 py-6">
-              <div className="text-primary text-2xl">
-                <Icon icon="teenyicons:tick-circle-solid" />
+              <div className="text-primary text-2xl mt-1">
+                <Icon icon="fluent:location-12-filled" />
               </div>
               <p className="text-default">{application.contact.address}</p>
             </div>
             <div className="flex items-start justify-start text-light-text gap-4">
-              <div className="text-primary text-2xl">
-                <Icon icon="teenyicons:tick-circle-solid" />
+              <div className="text-primary text-2xl mt-1">
+                <Icon icon="ic:round-mail" />
               </div>
 
               <div className="flex flex-col col-span-1 gap-3">
@@ -62,86 +125,57 @@ function CareerFormSection() {
             <h2 className="heading-lg text-center lg:text-start text-light-heading">
               {application.heading}
             </h2>
-            <form ref={form} onSubmit={sendEmail} encType="multipart/form-data" className="grid grid-cols-12 mt-10 lg:grid-cols-12 gap-x-4 gap-y-8 text-light-text">
-              <div className="flex flex-col col-span-12 md:col-span-6 gap-2">
-                <label htmlFor="text-default">First Name</label>
-                <input
-                  type="text"
-                  name="first_name"
-                  placeholder="Enter First Name"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-              <div className="flex flex-col col-span-12 md:col-span-6 gap-2">
-                <label htmlFor="text-default">Last Name</label>
-                <input
-                  type="text"
-                  name="last_name"
-                  placeholder="Enter Last Name"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-              <div className="flex flex-col col-span-12 md:col-span-6 gap-2">
-                <label htmlFor="text-default">Email Address</label>
-                <input
-                  type="text"
-                  name="email"
-                  placeholder="Enter Email Address"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-              <div className="flex flex-col col-span-12 md:col-span-6 gap-2">
-                <label htmlFor="text-default">Mobile Number</label>
-                <input
-                  type="text"
-                  name="mobile"
-                  placeholder="Enter Mobile Number"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-              <div className="flex flex-col col-span-12 md:col-span-12 gap-2 ">
-                <label htmlFor="text-default">Address</label>
-                <input
-                  type="text"
-                  name="address"
-                  placeholder="Enter Address"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-
-              <div className="flex flex-col col-span-12 md:col-span-6 gap-2">
-                <label htmlFor="text-default">First Job Position</label>
-                <input
-                  type="text"
-                  name="first_job_position"
-                  placeholder="Enter Job Position"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-              <div className="flex flex-col col-span-12 md:col-span-6 gap-2">
-                <label htmlFor="text-default">Resume</label>
-                <input
-                  type="file"
-                  name="uploads"
-                  placeholder="Enter Resume"
-                  className="border py-3  px-4 rounded-md "
-                />
-              </div>
-
-              <div className="flex flex-col col-span-12 md:col-span-12 gap-2">
-                <label htmlFor="text-default">Message (Optional)</label>
-                <textarea
-                  name="message"
-                  placeholder="Enter Your Message"
-                  className="border py-3  px-4 rounded-md"
-                  id=""
-                  cols="30"
-                  rows="10"
-                ></textarea>
-              </div>
-
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              encType="multipart/form-data"
+              className="grid grid-cols-12 mt-10 lg:grid-cols-12 gap-x-4 gap-y-8 text-black"
+            >
+              {formConfig.map((field, index) => (
+                <LabelInputContainer
+                  key={index}
+                  className={`flex flex-col gap-2 ${field.className}`}
+                >
+                  <label htmlFor={field.name} className="text-default">
+                    {field.label}
+                  </label>
+                  {field.type === "textarea" ? (
+                    <TextArea
+                      name={field.name}
+                      placeholder={field.placeholder}
+                      className="border py-3 px-4 rounded-md"
+                      cols="30"
+                      rows="10"
+                      type={field.type}
+                    />
+                  ) : field.type === "file" ? (
+                    <div className="relative">
+                      <Input
+                        type={field.type}
+                        name={field.name}
+                        className="border py-3 px-4 rounded-md pr-10"
+                        placeholder={field.placeholder}
+                      />
+                      <Icon
+                        icon="carbon:cloud-upload"
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-2xl cursor-pointer"
+                      />
+                    </div>
+                  ) : (
+                    <Input
+                      type={field.type}
+                      name={field.name}
+                      placeholder={field.placeholder}
+                      className="border py-3 px-4 rounded-md"
+                    />
+                  )}
+                </LabelInputContainer>
+              ))}
               <div className="md:col-span-12 col-span-12 md:ml-auto ">
-                <button type="submit" className="btn btn-hover mt-10 md:mb-6 btn-outline flex gap-3 lg:mx-0   group">
+                <button
+                  type="submit"
+                  className="btn btn-hover mt-10 md:mb-6 btn-outline flex gap-3 lg:mx-0   group"
+                >
                   <p className="text-secondary group-hover:text-white">
                     Send Your Application
                   </p>
@@ -158,5 +192,18 @@ function CareerFormSection() {
     </Section>
   );
 }
+
+const LabelInputContainer = ({ children, className }) => {
+  return (
+    <div className={cn("flex flex-col space-y-2 w-full", className)}>
+      {children}
+    </div>
+  );
+};
+
+LabelInputContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
 
 export default CareerFormSection;

@@ -54,15 +54,15 @@ const lifeStyle = {
       title: "Camera Monitoring",
     },
     {
-      icon: <Icon icon="simple-icons:homeassistant" className='mx-auto text-5xl text-white' />,
+      icon: <Icon icon="radix-icons:update"  className='mx-auto text-5xl text-white' />,
       title: "OTA Updates",
     },
     {
-      icon: <Icon icon="arcticons:home-connect" className='mx-auto text-5xl text-white' />,
+      icon: <Icon icon="simple-icons:homeassistant" className='mx-auto text-5xl text-white' />,
       title: "Kitchen assist",
     },
     {
-      icon: <Icon icon="radix-icons:update"  className='mx-auto text-5xl text-white' />,
+      icon: <Icon icon="arcticons:home-connect" className='mx-auto text-5xl text-white' />,
       title: "Home connect",
     },
   ],

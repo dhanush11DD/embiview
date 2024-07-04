@@ -36,14 +36,14 @@ function CareerFormSection() {
               <img src={contactApp} alt="applicationImg" className="" />
             </div>
             <div className="flex items-start justify-start text-light-text gap-4 py-6">
-              <div className="text-primary text-2xl">
-                <Icon icon="teenyicons:tick-circle-solid" />
+            <div className="text-primary text-2xl mt-1">
+                <Icon icon="fluent:location-12-filled" />
               </div>
               <p className="text-default">{application.contact.address}</p>
             </div>
             <div className="flex items-start justify-start text-light-text gap-4">
-              <div className="text-primary text-2xl">
-                <Icon icon="teenyicons:tick-circle-solid" />
+              <div className="text-primary text-2xl mt-1">
+                <Icon icon="ic:round-mail" />
               </div>
 
               <div className="flex flex-col col-span-1 gap-3">

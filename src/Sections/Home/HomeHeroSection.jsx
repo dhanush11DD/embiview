@@ -51,9 +51,26 @@ function HomeHeroSection() {
             transition={{ duration: 2 }}
             className="lg:w-[40%] w-full "
           >
-            <div className="relative w-[300px] h-[400px] md:w-[340px] md:h-[400px] lg:w-[360px] lg:h-[400px] mx-auto">
-              <div className="absolute -left-6 top-6 lg:left-0 w-full h-full z-20">
+            <div className="  relative w-[300px] h-[400px] md:w-[340px] md:h-[400px] lg:w-[360px] lg:h-[400px] mx-auto">
+              <div className="absolute -left-6 top-6 lg:left-0 w-full h-full z-30">
                 <img src={hero1} alt="Home automation" className="w-full" />
+              </div>
+              <div className="-top-24 -left-20 absolute  z-20 text-white">
+                <svg id="rotatingText" viewBox="0 0 200 200" width="300" height="300">
+                  <defs>
+                    <path id="circle" d="M 100, 100
+            m -75, 0
+            a 75, 75 0 1, 0 150, 0
+            a 75, 75 0 1, 0 -150, 0
+            ">
+                    </path>
+                  </defs>
+                  <text width="400">
+                    <textPath  alignmentBaseline="top" href="#circle" className="text font-lato font-normal text-[18px] leading-[21px] tracking-[1.7px] uppercase fill-white ">
+                      ibero bibendum, in eleifend mi interdum. Aenean id rhoncus nibh. Cras blandit mi lorem, id efficitur elit sodales nec. Interdum et malesuada fam
+                    </textPath>
+                  </text>
+                </svg>
               </div>
               <div className="absolute left-6 -top-6 lg:left-20 w-full h-full z-10">
                 <img src={hero2} alt="Home automation" className="w-full" />

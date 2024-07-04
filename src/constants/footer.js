@@ -8,7 +8,27 @@ const footer = {
     "Home Automation",
     "Automotive Infotainment",
   ],
-  links: ["Home", "Products", "About Us", "Contact Us", "Careers"],
+  links: [
+    {
+      link : '/',
+      title: "Home",
+    }, 
+    {
+      link : '/products',
+      title: "Products",
+    },
+    {
+      link : '/about',
+      title : "About Us"
+    },
+    {
+      link : '/contact',
+      title : "Contact Us"
+    },
+    {
+      link : '/career',
+      title : "Careers"
+    } ],
   emails: ["Contactus@embiview.com", "Admin@embiview.com", "Hr@embiview.com"],
   address:
     "WeWork Salarpuria Magnifica, Tin Factory, 78 Old Madras Road, Mahadevapura,Banglore, Karnataka 560016",

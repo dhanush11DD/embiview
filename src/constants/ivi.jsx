@@ -23,7 +23,7 @@ const digitalSec = [
         img : vehicles,
         heading : "Connected Vehicles",
         content : "Vehicle expectations now prioritize a connected, engaging experience. This shift drives our development of advanced Connected Vehicle systems, transforming Instrument Clusters, Digital Cockpits, and Infotainment systems into current realities.",
-        listContent : ["Unified User Experience","Enhanced Driver Assistance","Enhanced Driver Assistance"]
+        listContent : ["Unified User Experience","Enhanced Driver Assistance","Cloud Integration"]
     },
     {
         img : displays,
@@ -44,37 +44,37 @@ const technology = {
     heading: "Personalize Your Smart Home Experience",
     listContent: [
       {
-        icon: <Icon icon="fluent:headphones-sound-wave-32-filled"  />,
+        icon: <Icon icon="mdi:multimedia"  />,
         title: "Multimedia",
         content:
           "High-quality audio and video deliver an immersive entertainment experience for all passengers.",
       },
       {
-        icon: <Icon icon="bi:headset-vr"  />,
+        icon: <Icon icon="ic:sharp-security" />,
         title: "Cyber Security",
         content:
           "Industry-leading protection for your vehicle's data, ensuring a safe and secure driving experience.",
       },
       {
-        icon: <Icon icon="oi:audio" />,
+        icon: <Icon icon="ic:round-update" />,
         title: "OTA Updates:",
         content:
           "Keep your infotainment system up-to-date with the latest features and security patches through over-the-air updates.",
       },
       {
-        icon: <Icon icon="bi:headset-vr"  />,
+        icon: <Icon icon= "carbon:application-web"  />,
         title: "System Applications",
         content:
           "A suite of tailored applications designed to enhance functionality and user experience.",
       },
       {
-        icon: <Icon icon="oi:audio" />,
+        icon: <Icon icon="ic:round-dashboard" />,
         title: "Board Bringup",
         content:
           "Complete initialization and testing of all hardware components, ensuring optimal performance.",
       },
       {
-        icon: <Icon icon="bi:headset-vr"  />,
+        icon: <Icon icon="solar:logout-3-bold" />,
         title: "OS Migration",
         content:"Effortless transitions between operating systems to maintain compatibility and performance.",
       }

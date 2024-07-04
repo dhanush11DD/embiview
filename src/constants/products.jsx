@@ -1,4 +1,5 @@
 import { IMX, NXP, Qualcomm, Sticky1, Sticky2, Sticky3, Toradex } from "../assets/img/products";
+import { imxImg, npx, qualcomm, toradex } from "../assets/ivi";
 
 const heroContent = {
   mainContent:
@@ -248,29 +249,28 @@ const securityFeatures = {
 const supportedHardware = {
   blueHead: "Supported Hardware",
   heading: "Embedded Android Solutions for Optimal Integration",
-  listContent: [
+  listContent : [
     {
-      id: 1,
-      title: "NXP",
-      image: NXP
+        img : npx,
+        title : "NPX",
+        content: "Robust compatibility with NxP platforms, delivering high reliability and performance for diverse applications."
     },
     {
-      id: 2,
-      title: "IMX",
-      image: IMX
+        img : imxImg,
+        title : "IMX",
+        content: "Comprehensive support for i.MX hardware platforms, guaranteeing exceptional performance and dependability."
     },
     {
-      id: 3,
-      title: "Toradex",
-      image: Toradex
+        img : toradex,
+        title : "Toradex",
+        content: "Integration with Toradex modules for flexible and scalable solutions."
     },
     {
-      id: 4,
-      title: "Qualcomm",
-      image: Qualcomm
+        img : qualcomm,
+        title : "Qualcomm",
+        content: "Compatibility with Qualcomm chipsets for powerful and efficient infotainment systems."
     }
-    
-  ],
+]
 };
 
 const faqs = {

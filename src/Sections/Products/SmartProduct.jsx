@@ -15,7 +15,7 @@ export default function SmartProduct() {
       <Container className="justify-between lg:items-end items-center lg:gap-x-24">
 
         {/* Content */}
-        <div className="lg:w-[60%] lg:text-start text-center lg:mb-0 mb-10">
+        <div className="lg:w-[60%] lg:order-2 order-1 lg:text-start text-center lg:mb-0 mb-10">
           <p className="blue-heading lg:mb-1 mb-4">Next-Generation Smart Systems</p>
           <h2 className="heading-lg lg:mb-2 mb-4">
           Android Integration in Home and Automotive

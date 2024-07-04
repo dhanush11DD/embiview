@@ -1,11 +1,30 @@
-.proDrop{
+/* faq dropdwown start */
+.proDrop {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0,1,0,1);
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
-.proDrop.show{
+.proDrop.show {
     height: auto;
     max-height: 9999px;
-    transition: all 0.5s cubic-bezier(1,0,1,0);
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
 }
+
+/* faq dropdown stop */
+
+/* text rotate start */
+#rotatingText {
+    animation-name: rotate-circle;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-circle {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* text rotating end */

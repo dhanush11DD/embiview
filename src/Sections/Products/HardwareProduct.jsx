@@ -1,4 +1,5 @@
 import { supportedHardware } from "../../constants/products";
+import Tilt from "react-parallax-tilt";
 import Container from "../../layout/Container";
 import Section from "../../layout/Section";
 
@@ -13,16 +14,29 @@ export default function HardwareProduct() {
         </div>
         {/* Image Grid */}
         <div className="grid lg:grid-cols-4 grid-cols-2 md:gap-5 gap-4 text-white lg:py-0 py-14">
-          {supportedHardware.listContent.map((item) => (
-            <div
-              key={item.id}
-              className="flex flex-col items-center justify-center aspect-square border border-[#2E3B4C] rounded-[20px] p-4"
-              style={{ background: "radial-gradient(50% 50% at 50% 50%, #213B63 0%, #101722 100%)" }}
-            >
-              <img src={item.image} alt={item.title} className="lg:max-w-[160px] lg:min-h-[160px] max-h-[80px] min-h-[80px] mb-9"/>
-              <p className="heading-sm">{item.title}</p>
-            </div>
-          ))}
+          {supportedHardware.listContent.map((item, index) => (
+                                <div key={index} className="
+                                 h-[330px] bg-transparent cursor-pointer group perspective">
+                                    <div className="relative  preserve-3d group-hover:my-rotate-y-180 w-full lg:h-[270px] md:h-[210px] xl:h-[330px] duration-1000">
+                                        <div className="aspect-square md:h-full h-[300px] absolute flex justify-center items-center  flex-col backface-hidden border rounded-[19px] w-full ">
+                                            <img src={item.img} className="" />
+                                            <p className='text-[#fff] font-lato mt-4 font-normal text-[23px] leading-[37px]'>
+                                                {item.title}
+                                            </p>
+                                        </div>
+                                        <div
+                                            className="absolute my-rotate-y-180 backface-hidden rounded-[19px] md:h-full h-[300px] bg-gray-100 overflow-hidden">
+                                            <div
+                                                className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 ">
+                                                <p>
+                                                    {item.content}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+          }
         </div>
       </Container>
     </Section>

@@ -1,6 +1,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Section from "../../layout/Section";
 import Container from "../../layout/Container";
+import { motion, useInView } from 'framer-motion'
+import { useRef } from "react";
 
 const techProductData = [
   {
@@ -34,6 +36,18 @@ const techProductData = [
 ];
 
 export default function TechProduct() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const animation = {
+    hidden: {
+      opacity: 0,
+      scaleX: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      scaleX: 1,
+    }
+  }
   return (
     <Section isBlack={true}>
       <Container className="md:gap-y-24 lg:flex-col">
@@ -43,17 +57,24 @@ export default function TechProduct() {
           <h2 className="heading-lg text-white">Tech at Your Fingertips</h2>
         </div>
         {/* Grid */}
-        <div className="grid lg:grid-cols-4 ">
-          {techProductData.map((item) => (
-            <div
-              key={item.id}
-              className={`relative flex flex-col justify-start items-start p-5 ${item.id < 4 ? "lg:border-r-[0.6px] lg:border-b-0 border-b-[1px] border-[#60636D]" : ""} ${item.id === 1  ? "rounded-tl-[10px] lg:rounded-tl-none lg:rounded-bl-[10px] md:rounded-none lg:rounded-tr-none rounded-tr-[10px]" : item.id ===4 ? "lg:rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]" : ""} `}
+        <div className="grid lg:grid-cols-4 " ref={ref}>
+          {techProductData.map((item,i) => (
+            <motion.div
+              key={i}
+              variants={animation}
+              initial={"hidden"}
+              animate={isInView ? "visible" : "hidden"}
+              transition={{
+                duration: 0.5,
+                delay: i * 1
+              }}
+              className={`relative flex flex-col origin-top lg:origin-left justify-start items-start p-5 z-10 ${item.id < 4 ? "lg:border-r-[0.6px] lg:border-b-0 border-b-[1px] border-[#60636D]" : ""} ${item.id === 1 ? "rounded-tl-[10px] lg:rounded-tl-none lg:rounded-bl-[10px] md:rounded-none lg:rounded-tr-none rounded-tr-[10px]" : item.id === 4 ? "lg:rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]" : ""} `}
               style={{
                 background: "linear-gradient(180deg, #161C3B 0%, #2B1B46 100%)",
               }}
             >
               {/* Icon */}
-              <div className="bg-gray-700 p-2 mb-6">
+              <div className="bg-gray-700 p-2 mb-6 rounded-lg">
                 <Icon
                   icon={item.icon}
                   color="white"
@@ -81,7 +102,7 @@ export default function TechProduct() {
                 )
               }
               
-            </div>
+            </motion.div>
           ))}
         </div>
       </Container>

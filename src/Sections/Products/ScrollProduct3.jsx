@@ -43,7 +43,7 @@ function ScrollProduct() {
 
   return (
     <>
-      <section className="lg:hidden text-center space-y-10 py-10 px-6">
+      <section className="lg:hidden text-center space-y-10 py-10 px-6 bg-secondary">
         {content.map((item, index) => (
           <div key={index} className="w-full text-white ">
             <h2 className="mb-10 heading-lg">{item.title}</h2>
@@ -60,16 +60,16 @@ function ScrollProduct() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <p className="mb-6 text-light-text">{item.description}</p>
-            <div className="flex flex-col items-center">
+            <p className="mb-6 text-light-text text-center md:text-start content-2">{item.description}</p>
+            <div className="flex flex-col items-start">
               <ul className="lg:w-full">
                 {item.points.map((point, index) => (
-                  <li key={index} className="flex items-center content-2">
+                  <li key={index} className="flex items-center pb-4 gap-2 content-2">
                     <Icon
                       icon="mdi:check-bold"
                       className="bg-primary text-black rounded-full p-1 mr-2"
                     />
-                    {point}
+                    <p className="text-start">{point}</p>
                   </li>
                 ))}
               </ul>
@@ -110,15 +110,15 @@ function ScrollProduct() {
               >
                 <h2 className="heading-lg">{content.title}</h2>
                 <div className="mt-3 pl-6 border-l border-[#4E4D4F]">
-                  <p className="mb-6 text-light-text">{content.description}</p>
+                  <p className="mb-6 content-2 text-light-text">{content.description}</p>
                   <ul className="lg:w-full">
                     {content.points.map((point, idx) => (
-                      <li key={idx} className="flex items-center content-2">
+                      <li key={idx} className="flex items-center mb-4 gap-2 content-2">
                         <Icon
                           icon="mdi:check-bold"
                           className="bg-primary text-black rounded-full p-1 mr-2"
                         />
-                        {point}
+                        <p className="">{point}</p>
                       </li>
                     ))}
                   </ul>

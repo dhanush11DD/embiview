@@ -49,15 +49,12 @@ export default function OTAProduct() {
             {technologyData.map((item) => (
               <div
                 key={item.id}
-                className="rounded-lg p-4 flex items-center gap-4"
+                className="rounded-lg p-4 flex gap-4"
                 style={{ background: "rgba(138, 170, 209, 0.10)" }}
               >
-                <div className="">
-                  <Icon
-                    icon="mdi:check-bold"
-                    className="bg-primary text-white rounded-full p-1 mr-2"
-                  />
-                </div>
+                    <div className="text-primary text-xl mt-2">
+                      <Icon icon="teenyicons:tick-circle-solid" />
+                    </div>
                 <div className="">
                   <p className="heading-sm">{item.title}</p>
                   <p className="content-normal text-light-text">

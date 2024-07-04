@@ -11,10 +11,10 @@ const creatingOs = {
   content:
     "Customized Android OS for home automation, embedded systems, industry, and vehicle infotainment, with reliable and efficient hardware management. we specialize in customizing Android OS solutions tailored to your hardware specifications and customer requirements.",
   gridContent: [
-    { count: "99%", title: "System Uptime" },
-    { count: "100+", title: "Supported Hardware" },
-    { count: "50%", title: "Faster Deployment" },
-    { count: "24/7", title: "Customer Support" },
+    { count: "99", symbols:"%", title: "System Uptime" },
+    { count: "100", symbols:"+", title: "Supported Hardware" },
+    { count: "50", symbols:"%", title: "Faster Deployment" },
+    { count: "24", symbols:"/7", title: "Customer Support" },
   ],
 };
 
