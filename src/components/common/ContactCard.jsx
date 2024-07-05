@@ -32,7 +32,7 @@ function ContactCard({ contactSec }) {
           <div className="flex flex-col">
             <h2 className="heading-lg">{contactSec.heading}</h2>
             <p className="content-2 text-dark-text">{contactSec.content}</p>
-            <Link to="/contact" className="btn bg-glass-gradient mt-10 text-white cursor-pointer gap-3 ">
+            <Link to="/contact" className="btn bg-glass-gradient mt-10 text-white w-fit cursor-pointer gap-3 ">
               <p className="pointer-events-none">Let’s Connect</p>
               <Icon
                 icon="heroicons:arrow-up-16-solid"

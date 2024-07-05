@@ -26,6 +26,7 @@ function Header() {
   const [hideNav, setHideNav] = useState(true);
   const [scrollUp, setScrollUp] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [hasScrolled, setHasScrolled] = useState(false); // New state for background color change
 
   function handleNav() {
     setHideNav(!hideNav);
@@ -41,6 +42,12 @@ function Header() {
         setScrollUp(true);
       }
       setLastScrollY(window.scrollY);
+
+      if (window.scrollY > 50) { // Adjust this value based on when you want the background color to change
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -51,81 +58,80 @@ function Header() {
 
   return (
     <>
-          <HeroGradingTop />
+      <HeroGradingTop />
       <HeroGradingBottom1 />
       <HeroGradingBottom2 />
       <header
-      className={`container-fluid  text-white lg:py-8 py-4 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
-        scrollUp ? "translate-y-0 bg-secondary" : "-translate-y-full"
-      }`}
-    >
-      {/* responsive nav items */}
-      <div
-        className={`absolute bg-secondary bg-opacity-70 top-0 left-0 right-0 bottom-0 w-full h-screen z-20 ${
-          hideNav ? "scale-x-0" : "scale-x-100"
-        } origin-left transition-all duration-300`}
+        className={`container-fluid text-white lg:py-8 py-4 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+          scrollUp ? "translate-y-0" : "-translate-y-full"
+        } ${hasScrolled ? "bg-secondary" : "bg-transparent"}`}
       >
-        <div className="bg-secondary w-4/6 h-full">
-          <div className="p-2 flex justify-between items-center">
-            <div className="">
-              <img src={brandLogo} alt="" className="" />
+        {/* responsive nav items */}
+        <div
+          className={`absolute bg-opacity-70 top-0 left-0 right-0 bottom-0 w-full h-screen z-20 ${
+            hideNav ? "scale-x-0" : "scale-x-100"
+          } origin-left transition-all duration-300`}
+        >
+          <div className="w-4/6 h-full">
+            <div className="p-2 flex justify-between items-center">
+              <div className="">
+                <img src={brandLogo} alt="" className="" />
+              </div>
+              <div className="">
+                <Icon
+                  icon="line-md:menu-to-close-transition"
+                  className="text-white text-2xl cursor-pointer"
+                  onClick={handleNav}
+                />
+              </div>
             </div>
-            <div className="">
+            <ul className="flex flex-col gap-3 mt-3 p-5">
+              {navLinks.map((link, index) => (
+                <li key={index} className="py-3 border-b border-b-slate-700">
+                  <Link
+                    to={link.path}
+                    className="text-white content-2 p-2 header-list"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        {/* responsive nav items */}
+        <div className="container m-0 md:m-auto flex justify-between items-center">
+          <div className="">
+            <img src={brandLogo} alt="" className="" />
+          </div>
+          <div className="lg:flex hidden">
+            <ul className="flex gap-4 md:flex-row md:gap-10">
+              {navLinks.map((link, index) => (
+                <li key={index} className="">
+                  <Link to={link.path} className="text-white content-2 header-list">
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="">
+            <div className="hidden lg:block">
+              <Link to="/contact">
+                <button className="btn btn-fill">Talk to our team</button>
+              </Link>
+            </div>
+            <div className="lg:hidden block">
               <Icon
-                icon="line-md:menu-to-close-transition"
-                className="text-white text-2xl cursor-pointer"
+                icon="heroicons-outline:menu-alt-2"
+                className="text-white text-2xl"
                 onClick={handleNav}
               />
             </div>
           </div>
-          <ul className="flex flex-col gap-3 mt-3 p-5">
-            {navLinks.map((link, index) => (
-              <li key={index} className="py-3 border-b border-b-slate-700">
-                <Link
-                  to={link.path}
-                  className="text-white content-2 p-2 header-list"
-                >
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
-      </div>
-      {/* responsive nav items */}
-      <div className="container m-0 md:m-auto flex justify-between items-center">
-        <div className="">
-          <img src={brandLogo} alt="" className="" />
-        </div>
-        <div className="lg:flex hidden">
-          <ul className="flex gap-4 md:flex-row md:gap-10">
-            {navLinks.map((link, index) => (
-              <li key={index} className="">
-                <Link to={link.path} className="text-white content-2 header-list">
-                  {link.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="">
-          <div className="hidden lg:block">
-            <Link to="/contact">
-              <button className="btn btn-fill">Talk to our team</button>
-            </Link>
-          </div>
-          <div className="lg:hidden block">
-            <Icon
-              icon="heroicons-outline:menu-alt-2"
-              className="text-white text-2xl"
-              onClick={handleNav}
-            />
-          </div>
-        </div>
-      </div>
-    </header>
+      </header>
     </>
-
   );
 }
 

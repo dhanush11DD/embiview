@@ -14,5 +14,6 @@ import retail from './Retail.svg'
 import AndroidVid from './android-vid.mp4'
 import healthcare from './HealthCare.svg'
 import Ev from './Ev.svg'
+import android from './android.svg'
 
-export {DragonBoard,RbPi,AndroidVid,rockPi,nxp,hero1,hero2,osBaner,smartLive1,smartLive2,smartLive3,homeFeatures,smartHome,retail,healthcare,Ev}
+export {DragonBoard,RbPi,AndroidVid,rockPi,nxp,hero1,hero2,osBaner,smartLive1,smartLive2,smartLive3,homeFeatures,smartHome,retail,healthcare,Ev,android}
