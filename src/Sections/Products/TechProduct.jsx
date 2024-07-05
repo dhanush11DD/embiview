@@ -15,7 +15,7 @@ const techProductData = [
   {
     id: 2,
     icon: "icon-park-outline:application-menu",
-    title: "Personalized Android OS",
+    title: "Personalized Android operating system",
     description:
       "Custom Android development for unique business needs and requirements.",
   },
@@ -41,11 +41,11 @@ export default function TechProduct() {
   const animation = {
     hidden: {
       opacity: 0,
-      scaleX: 0.8,
+      scale: 0.8,
     },
     visible: {
       opacity: 1,
-      scaleX: 1,
+      scale: 1,
     }
   }
   return (
@@ -68,7 +68,7 @@ export default function TechProduct() {
                 duration: 0.5,
                 delay: i * 1
               }}
-              className={`relative flex flex-col origin-top lg:origin-left justify-start items-start p-5 z-10 ${item.id < 4 ? "lg:border-r-[0.6px] lg:border-b-0 border-b-[1px] border-[#60636D]" : ""} ${item.id === 1 ? "rounded-tl-[10px] lg:rounded-tl-none lg:rounded-bl-[10px] md:rounded-none lg:rounded-tr-none rounded-tr-[10px]" : item.id === 4 ? "lg:rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]" : ""} `}
+              className={`relative flex flex-col justify-start items-start p-5 z-10 ${item.id < 4 ? " lg:border-b-0 border-b-[1px] border-[#60636D]" : ""} ${item.id === 1 ? "rounded-tl-[10px] lg:rounded-tl-none lg:rounded-bl-[10px] md:rounded-none lg:rounded-tr-none rounded-tr-[10px]" : item.id === 4 ? "lg:rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]" : ""} `}
               style={{
                 background: "linear-gradient(180deg, #161C3B 0%, #2B1B46 100%)",
               }}

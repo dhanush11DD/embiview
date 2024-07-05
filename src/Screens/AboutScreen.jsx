@@ -10,15 +10,15 @@ import { contactSec } from '../constants/about'
 function AboutScreen() {
   return (
     <>
-    <HeroSection />
-    <AboutUsSection />
-    <VisionSection /> 
-    <ConnectingSection />
-    <OurTeamSection />
-    <div className="">
+      <HeroSection />
+      <AboutUsSection />
+      <VisionSection />
+      <ConnectingSection />
+      <OurTeamSection />
+      <div className="">
         <ContactCard contactSec={contactSec} />
       </div>
-      
+
     </>
   )
 }

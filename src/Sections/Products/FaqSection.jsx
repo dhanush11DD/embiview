@@ -22,13 +22,18 @@ function FaqSection() {
                     <p className="content-2 text-light-text lg:mb-6 ">
                         {faq.content}
                     </p>
-                    <button className=" btn btn-hover btn-outline flex gap-3 group mt-6">
-                        <p className="text-blue-500">Contact Us</p>
-                        <Icon
-                            icon="heroicons:arrow-up-16-solid"
-                            className="text-blue-500 text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
-                        />
-                    </button>
+                     <button
+                  type="submit"
+                  className="btn btn-hover mt-10 md:mb-6 btn-outline flex gap-3 lg:mx-0   group"
+                >
+                  <p className="text-[#4541FE] group-hover:text-white">
+                    Contact us
+                  </p>
+                  <Icon
+                    icon="heroicons:arrow-up-16-solid"
+                    className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75 text-primary group-hover:text-white"
+                  />
+                </button>
                 </div>
                 <div className="md:w-[60%] py-8">
                     {
@@ -39,17 +44,19 @@ function FaqSection() {
                                 <div
                                     onClick={() => togle(ind)}
                                     className="flex justify-center items-center gap-4 cursor-pointer">
-                                    <div className="vl border-l-4 h-[40px] border-[#387FF5] "></div>
+                                    <div className="vl border-l-4 h-[40px] border-[#4541FE] "></div>
                                     <h1
 
                                         className="text-[#253241] font-lato text-[20px] font-bold leading-[29px] ">
                                         {da.heading}
                                     </h1>
                                     {
-                                        selected === ind ? <Icon className="ml-auto" icon="oui:arrow-down" /> : <Icon className="ml-auto" icon="oui:arrow-up" />
+                                        selected === ind ?  <Icon className="ml-auto" icon="oui:arrow-up" /> :  <Icon className="ml-auto" icon="oui:arrow-down" />
                                     }
                                 </div>
-                                <h2 className={selected === ind ? 'proDrop show content-2 text-light-text lg:mb-6 ' : 'proDrop content-2 text-light-text lg:mb-6 '}>{da.answer} </h2>
+                                <h2 className={selected === ind ? 'proDrop show content-2 text-light-text lg:mb-6 mt-3 ' : 'proDrop content-2 text-light-text lg:mb-6 mt-3'}>
+                                    {da.answer}
+                                     </h2>
                                 <div className="py-6">
                                     <hr className="" />
                                 </div>

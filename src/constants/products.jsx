@@ -297,33 +297,33 @@ const faq = {
   query:[
     {
       heading:'What is EMBIVIEW and what services do you offer?',
-      answer:'in providing custom embedded AOSP solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+      answer:'We specialize in providing custom embedded AOSP solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
        active:1
     },
     {
-      heading:'How does the AI-driven predictive analytics feature work?',
-      answer:' custom embedded AOSP solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+      heading:'How does EMBIVIEW ensure the safety & security of custom Android OS? ',
+      answer:'We prioritize safety &security by implementing regular security updates, integrating custom certificates, and utilizing advanced security measures. Our custom Android OS solutions are designed to protect your data and systems from vulnerabilities, ensuring a secure operating environment for your devices.',
        active:2
     },
     {
-      heading:'Is my data secure with Neuros?',
-      answer:'embedded AOSP solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+      heading:'Can EMBIVIEW provide support for HAL layer customization?',
+      answer:'Yes, We customize Hardware Abstraction Layers (HALs), optimize performance, and ensure seamless integration with your hardware components, resulting in an efficient and reliable system. ',
        active:3
     },
     {
       heading:'Can I integrate Neuros with other tools and platforms I currently use?',
-      answer:'solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
+      answer:'We customize Embedded AOSP solutions for Human-Machine Interface (HMI) and In-Vehicle Infotainment (IVI) applications offer intuitive, user-friendly interfaces and robust performance. Our expertise in HMI and IVI technology ensures that your applications are responsive, reliable, and enhance the overall user experience. ',
        active:4
     },
     {
-      heading:'Can I integrate Neuros with other tools and platforms I currently use?',
-      answer:'solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
-       active:4
+      heading:`How does EMBIVIEW handle OS updates and maintenance?`,
+      answer:'We provide seamless Over-The-Air (OTA) updates and delta updates to keep your systems current without significant downtime. We offer continuous support and regular maintenance to ensure your devices stay updated with the latest features and security patches, maintaining optimal performance.',
+       active:5
     },
     {
-      heading:'Can I integrate Neuros with other tools and platforms I currently use?',
-      answer:'solutions tailored for embedded systems. Our services include Android OS integration, custom OS development, hardware optimization, security updates, and more. We focus on delivering high-performance, secure, and optimized operating systems to meet the specific needs of our clients. ',
-       active:4
+      heading:'How does EMBIVIEW Provide support for kernel and hardware? ',
+      answer:`We support kernel and hardware by offering custom Android builds optimized for specific devices, ensuring compatibility through validated kernels, driver support, and ongoing updates.`,
+       active:6
     },
   ]
 }

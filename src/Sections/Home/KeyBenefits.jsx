@@ -192,6 +192,7 @@ function KeyBenefits() {
           <motion.div
             variants={textVariants}
             initial="hidden"
+            whileHover={{ scale: 1.1 }}
             animate={isBottomDivInView ? "visible" : "hidden"}
             className="bg-[#212B37]  order-2 lg:order-1 rounded-2xl px-6 py-9 hover:scale-110 transition-all duration-200 origin-bottom-right"
             custom={2}
@@ -291,6 +292,7 @@ function KeyBenefits() {
           <motion.div
             variants={textVariants}
             initial="hidden"
+            whileHover={{ scale: 1.1 }}
             animate={isBottomDivInView ? "visible" : "hidden"}
             className="bg-[#212B37] order-3 lg:order-3  rounded-2xl px-6 py-9 hover:scale-110 transition-all duration-200 origin-top-right"
             custom={4}
@@ -312,9 +314,10 @@ function KeyBenefits() {
           {/* Third content div */}
           <motion.div
             variants={textVariants}
+            whileHover={{ scale: 1.1 }}
             initial="hidden"
             animate={isBottomDivInView ? "visible" : "hidden"}
-            className="bg-[#212B37] order-1 lg:order-2 rounded-2xl px-6 py-9 hover:scale-110 transition-all duration-200 origin-bottom-left"
+            className="bg-[#212B37] order-1 lg:order-2 rounded-2xl px-6 py-9 transition-all duration-200 origin-bottom-left"
             custom={6}
           >
             <h3 className="heading-sm text-white pb-3">
@@ -334,6 +337,7 @@ function KeyBenefits() {
           {/* Fourth content div */}
           <motion.div
             variants={textVariants}
+            whileHover={{ scale: 1.1 }}
             initial="hidden"
             animate={isBottomDivInView ? "visible" : "hidden"}
             className="bg-[#212B37]  order-4 md:order-4 rounded-2xl px-6 py-9 hover:scale-110 transition-all duration-200 origin-top-left"

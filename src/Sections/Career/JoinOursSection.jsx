@@ -32,7 +32,7 @@ function JoinOursSection() {
                                             <Icon icon="teenyicons:tick-circle-solid" />
                                         </div>
                                         <div className="text-dark-text">
-                                            <h3 className="heading-sm">{item.title}</h3>
+                                            <h3 className="heading-sm text-white">{item.title}</h3>
                                             <p className="text-defalt leading-9 tracking-wide">{item.content}</p>
                                         </div>
                                     </div>

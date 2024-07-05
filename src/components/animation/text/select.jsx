@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 import { cn } from "../../../utils/cn.js";
 
-const Input = forwardRef(function Input({ className, type, ...props }, ref) {
+const Select = forwardRef(function Input({ className, type, ...props }, ref) {
   const radius = 100; // change this to increase the radius of the hover effect
   const [visible, setVisible] = useState(false);
 
@@ -33,12 +33,14 @@ const Input = forwardRef(function Input({ className, type, ...props }, ref) {
       onMouseLeave={() => setVisible(false)}
       className="p-[2px] rounded-lg transition duration-300 group/input"
     >
-      <input
+      <select
+        name="cars" id="cars"
         type={type}
         className={cn(
-          `flex h-10 w-full border-none bg-white  text-black shadow-input rounded-md px-3 py-2 text-sm  file:border-0 file:bg-transparent 
+
+          `flex w-full  border-none bg-white text-black shadow-input rounded-md px-3 py-2 text-sm  file:border-0 file:bg-transparent 
           file:text-sm file:font-medium placeholder:text-neutral-400 
-          focus-visible:outline-none focus-visible:ring-1  focus-visible:ring-neutral-400
+          focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400
           disabled:cursor-not-allowed disabled:opacity-50
           group-hover/input:shadow-none transition duration-400
           `,
@@ -51,11 +53,11 @@ const Input = forwardRef(function Input({ className, type, ...props }, ref) {
   );
 });
 
-Input.propTypes = {
+Select.propTypes = {
   className: PropTypes.string,
   type: PropTypes.string,
 };
 
-Input.displayName = "Input";
+Select.displayName = "Select";
 
-export { Input };
+export { Select };

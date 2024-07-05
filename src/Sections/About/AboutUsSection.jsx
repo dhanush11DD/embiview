@@ -35,7 +35,7 @@ function AboutUsSection() {
                       <Icon icon="teenyicons:tick-circle-solid" />
                     </div>
                     <div className="">
-                      <p className="heading-md text-light-heading">{item.title}</p>
+                      <p className="heading-sm text-light-heading">{item.title}</p>
                       <p className="content-2 lg:text-start">
                         {item.content}
                       </p>

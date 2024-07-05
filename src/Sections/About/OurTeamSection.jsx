@@ -33,7 +33,7 @@ function OurTeamSection() {
                   <img
                     src={team}
                     alt=""
-                    className=" h-full grayscale group-hover:grayscale-0 transition-all duration-200"
+                    className=" h-full grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-200"
                   />
                 </div>
               </div>

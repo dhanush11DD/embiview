@@ -10,7 +10,7 @@ import SpecializeSection from '../Sections/Home/SpecializeSection'
 import SmartLivingSection from '../Sections/Home/SmartLivingSection'
 
 function HomeScreen() {
-  return (
+  return ( 
     <div>
       <HomeHeroSection />
       <OsCreatingSection />

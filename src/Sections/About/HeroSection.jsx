@@ -5,6 +5,7 @@ import { Header } from "../../components/common";
 import Section from "../../layout/Section";
 import Container from "../../layout/Container";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const leftContentVariant = {
   hidden: { opacity: 0, x: -100 }, // Start from the left and hidden
@@ -34,13 +35,15 @@ function HeroSection() {
               {heroContent.content}
             </p>
             <div className="hidden lg:block">
-              <button className="btn btn-hover text-white btn-outline flex gap-3 group">
-                <p className="">Explore More</p>
-                <Icon
-                  icon="heroicons:arrow-up-16-solid"
-                  className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
-                />
-              </button>
+              <Link to='/products'>
+                <button className="btn btn-hover text-white btn-outline flex gap-3 group">
+                  <p className="">Explore More</p>
+                  <Icon
+                    icon="heroicons:arrow-up-16-solid"
+                    className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
+                  />
+                </button>
+              </Link>
             </div>
           </motion.div>
           <motion.div

@@ -29,12 +29,14 @@ function Footer() {
                 <p className="font-bold">Our Services</p>
               </div>
               {footer.services.map((item, i) => (
-                <p
-                  key={i}
-                  className="leading-9 font-normal text-[#B3B3B3]"
-                >
-                  {item}
-                </p>
+                <Link to={item.to} key={i}>
+                  <p
+                    key={i}
+                    className="leading-9 font-normal text-[#B3B3B3]"
+                  >
+                    {item.name}
+                  </p>
+                </Link>
               ))}
             </div>
             {/* Links */}

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { applicationImg } from "../../assets/career";
 import { application } from "../../constants/career";
@@ -9,25 +9,37 @@ import PropTypes from "prop-types";
 import { cn } from "../../utils/cn.js";
 import { Input } from "../../components/animation/text/input.jsx";
 import { TextArea } from "../../components/animation/text/textarea.jsx";
+import { Select } from "../../components/animation/text/select.jsx";
 
 function CareerFormSection() {
   const form = useRef();
+  const [error, setError] = useState(null);
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+  const [content, setContent] = useState({
+    firstName: '',
+    lastName: '',
+    email: "",
+    mobile: '',
+    message: ''
+  })
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm("service_bcfn07v", "template_8j84yal", form.current, {
-        publicKey: "v2ZvBGbh4PNTlwJvw",
-      })
-      .then(
-        () => {
-          alert("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    // emailjs
+    //   .sendForm("service_bcfn07v", "template_8j84yal", form.current, {
+    //     publicKey: "v2ZvBGbh4PNTlwJvw",
+    //   })
+    //   .then(
+    //     () => {
+    //       alert("SUCCESS!");
+    //     },
+    //     (error) => {
+    //       console.log("FAILED...", error.text);
+    //     }
+    //   );
+    alert("SUCCESS!");
   };
 
   // Form configuration object
@@ -68,8 +80,8 @@ function CareerFormSection() {
       className: "col-span-12",
     },
     {
-      label: "First Job Position",
-      type: "text",
+      label: "Technical Expertise",
+      type: "dropdown",
       name: "first_job_position",
       placeholder: "Enter Job Position",
       className: "col-span-12 md:col-span-6",
@@ -78,7 +90,7 @@ function CareerFormSection() {
       label: "Resume",
       type: "file",
       name: "uploads",
-      placeholder: "Enter Resume",
+      placeholder: "Attach your resume",
       className: "col-span-12 md:col-span-6",
     },
     {
@@ -98,7 +110,7 @@ function CareerFormSection() {
             <div className="max-w-[380px] mx-auto">
               <img src={applicationImg} alt="applicationImg" className="" />
             </div>
-            <div className="flex items-start justify-start text-light-text gap-4 py-6">
+            <div className="flex items-start justify-start text-light-text gap-4 mt-12">
               <div className="text-primary text-2xl mt-1">
                 <Icon icon="fluent:location-12-filled" />
               </div>
@@ -156,11 +168,24 @@ function CareerFormSection() {
                         className="border py-3 px-4 rounded-md pr-10"
                         placeholder={field.placeholder}
                       />
-                      <Icon
-                        icon="carbon:cloud-upload"
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-2xl cursor-pointer"
+                        <div className="absolute bg-primary text-white rounded-[6px] p-1.5 top-2 right-2">
+                        <Icon icon="icomoon-free:attachment"
+                        className="text-lg cursor-pointer"
                       />
+                        </div>
                     </div>
+                  ) : field.type === 'dropdown' ? (
+                    <Select>
+                      <option value="sathish" hidden>Choose Technical Expertise</option>
+                      <option value="sathish">Android Application</option>
+                      <option value="sathish">Android SDK</option>
+                      <option value="sathish">Android Framework</option>
+                      <option value="">Programming Languages: Java, C++, Kotlin</option>
+                      <option value="">HAL, WiFi, Bluetooth & Multimedia</option>
+                      <option value="">Kernel, Driver & C</option>
+                      <option value="">Cybersecurity functional safety</option>
+                    </Select>
+
                   ) : (
                     <Input
                       type={field.type}
@@ -176,7 +201,7 @@ function CareerFormSection() {
                   type="submit"
                   className="btn btn-hover mt-10 md:mb-6 btn-outline flex gap-3 lg:mx-0   group"
                 >
-                  <p className="text-secondary group-hover:text-white">
+                  <p className="text-primary group-hover:text-white">
                     Send Your Application
                   </p>
                   <Icon

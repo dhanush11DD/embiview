@@ -144,6 +144,7 @@ function KeyBenefits() {
             <motion.div
               className="bg-[#212B37] order-2 lg:order-1 rounded-2xl p-6"
               variants={textVariants}
+              whileHover={{ scale: 1.1 }}
               initial="hidden"
               animate={isBottomDivInView ? "visible" : "hidden"}
               custom={2}
@@ -230,6 +231,7 @@ function KeyBenefits() {
               className="bg-[#212B37] order-3 lg:order-3 rounded-2xl p-6"
               variants={textVariants}
               initial="hidden"
+              whileHover={{ scale: 1.1 }}
               animate={isBottomDivInView ? "visible" : "hidden"}
               custom={4}
             >
@@ -256,6 +258,7 @@ function KeyBenefits() {
               className="bg-[#212B37] order-1 lg:order-2 rounded-2xl p-6"
               variants={textVariants}
               initial="hidden"
+              whileHover={{ scale: 1.1 }}
               animate={isBottomDivInView ? "visible" : "hidden"}
               custom={6}
             >
@@ -282,6 +285,7 @@ function KeyBenefits() {
               className="bg-[#212B37] order-4 md:order-4 rounded-2xl p-6"
               variants={textVariants}
               initial="hidden"
+              whileHover={{ scale: 1.1 }}
               animate={isBottomDivInView ? "visible" : "hidden"}
               custom={8}
             >

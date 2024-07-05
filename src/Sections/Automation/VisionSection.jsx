@@ -52,18 +52,18 @@ function VisionSection() {
           <div className="w-full hidden lg:block lg:w-[40%]">
             <div className="relative">
               <motion.div
-                className="absolute"
-                animate={positionVariants[position]}
-                transition={{ duration: 0.5 }}
+                className=" "
+                // animate={positionVariants[position]}
+                // transition={{ duration: 0.5 }}
               >
-                <img src={smartHome} alt="" className="max-w-full" />
+                <img src={smartHome2} alt="" className="absolute z-10 top-[280px] left-[-92px] w-[250px] max-w-full" />
               </motion.div>
               <motion.div
                 className="absolute"
-                animate={positionVariants[1 - position]}
-                transition={{ duration: 0.5 }}
+                // animate={positionVariants[1 - position]}
+                // transition={{ duration: 0.5 }}
               >
-                <img src={smartHome2} alt="" className="max-w-full" />
+                <img src={ smartHome} alt="" className="max-w-full" />
               </motion.div>
             </div>
           </div>

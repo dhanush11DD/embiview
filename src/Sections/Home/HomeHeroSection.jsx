@@ -35,13 +35,15 @@ function HomeHeroSection() {
               {heroContent.content}
             </p>
             <div className="hidden lg:block">
-              <button className="btn btn-hover text-white btn-outline flex gap-3 group">
-                <p className="">Explore More</p>
-                <Icon
-                  icon="heroicons:arrow-up-16-solid"
-                  className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
-                />
-              </button>
+              <Link to='/products'>
+                <button className="btn btn-hover text-white btn-outline flex gap-3 group">
+                  <p className="">Explore More</p>
+                  <Icon
+                    icon="heroicons:arrow-up-16-solid"
+                    className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
+                  />
+                </button>
+              </Link>
             </div>
           </motion.div>
           <motion.div
@@ -55,8 +57,8 @@ function HomeHeroSection() {
               <div className="absolute -left-6 top-6 lg:left-0 w-full h-full z-30">
                 <img src={hero1} alt="Home automation" className="w-full" />
               </div>
-              <div className="-top-24 -left-20 absolute  z-20 text-white">
-                <svg id="rotatingText" viewBox="0 0 200 200" width="300" height="300">
+              <div className="-top-[64px] -left-20 absolute  z-20">
+                <svg id="rotatingText" viewBox="0 0 200 200" width="250" height="250">
                   <defs>
                     <path id="circle" d="M 100, 100
             m -75, 0
@@ -66,8 +68,8 @@ function HomeHeroSection() {
                     </path>
                   </defs>
                   <text width="400">
-                    <textPath  alignmentBaseline="top" href="#circle" className="text font-lato font-normal text-[18px] leading-[21px] tracking-[1.7px] uppercase fill-white ">
-                      ibero bibendum, in eleifend mi interdum. Aenean id rhoncus nibh. Cras blandit mi lorem, id efficitur elit sodales nec. Interdum et malesuada fam
+                    <textPath  alignmentBaseline="top" href="#circle" className="text font-lato font-normal text-[16px] leading-[21px] tracking-[5px] uppercase fill-white ">
+                    Discover Embedded Android Solutions with us
                     </textPath>
                   </text>
                 </svg>

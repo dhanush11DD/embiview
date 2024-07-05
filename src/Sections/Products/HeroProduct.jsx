@@ -5,6 +5,7 @@ import { MobileHeroProduct, Product_Hero } from "../../assets/img/products";
 import { Header } from "../../components/common";
 import { motion } from "framer-motion";
 import { heroContent } from "../../constants/products";
+import { Link } from "react-router-dom";
 
 
 const leftContentVariant = {
@@ -21,9 +22,6 @@ export default function HeroProduct() {
   return (
     <Section isBlack={true} className="lg:min-h-screen ">
       <Header />
-
-
-
       <Container className="lg:relative lg:py-24">
         <div className=" flex flex-col lg:flex-row w-full ">
           <motion.div
@@ -38,13 +36,15 @@ export default function HeroProduct() {
               {heroContent.content}
             </p>
             <div className="hidden lg:block">
-              <button className="btn btn-hover text-white btn-outline flex gap-3 group">
-                <p className="">Explore More</p>
-                <Icon
-                  icon="heroicons:arrow-up-16-solid"
-                  className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
-                />
-              </button>
+              <Link to='/contact'>
+                <button className="btn btn-hover text-white btn-outline flex gap-3 group">
+                  <p className="">Contact Us</p>
+                  <Icon
+                    icon="heroicons:arrow-up-16-solid"
+                    className="text-lg rotate-45 group-hover:rotate-90 transition-all duration-75"
+                  />
+                </button>
+              </Link>
             </div>
           </motion.div>
           <motion.div

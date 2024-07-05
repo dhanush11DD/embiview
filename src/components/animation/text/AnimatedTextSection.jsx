@@ -59,7 +59,7 @@ const AnimatedTextSection = ({
         animate={isTextInView ? "visible" : "hidden"}
         custom={2}
         className={`content-2 pb-5 ${
-          isBlack ? "text-light-text" : "text-dark-text"
+          isBlack ? "text-dark-text" : "text-light-text"
         }`}
       >
         {content}
