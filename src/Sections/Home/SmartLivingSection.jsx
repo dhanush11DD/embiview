@@ -14,7 +14,7 @@ function SmartLivingSection() {
             blueHead={smartLiving.blueHead}
             heading={smartLiving.heading}
             content={smartLiving.content}
-            buttonText="Explore More"
+            buttonText="Smartify Now"
             buttonLink="/automation"
             buttonIcon={"heroicons:arrow-up-16-solid"}
           />

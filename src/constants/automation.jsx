@@ -106,14 +106,6 @@ const benefits = {
       ],
     },
     {
-      title: "Energy Consumption Dashboard:",
-      listItems: [
-        "Monitor solar energy production and appliance electricity usage.",
-        "Track total energy usage consumption.",
-        "Make informed decisions for energy efficiency.",
-      ],
-    },
-    {
       title: "Cyber Security & Functional Safety",
       listItems: [
         "Secure your systems with camera-managed cybersecurity compliance.",
@@ -121,6 +113,15 @@ const benefits = {
         "Safeguard personal data with ISO measures.",
       ],
     },
+    {
+      title: "Energy Consumption Dashboard",
+      listItems: [
+        "Monitor solar energy production and appliance electricity usage.",
+        "Track total energy usage consumption.",
+        "Make informed decisions for energy efficiency.",
+      ],
+    },
+    
     {
       title: "AR/VR Gaming Integration",
       listItems: [

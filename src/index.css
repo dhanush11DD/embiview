@@ -151,3 +151,17 @@ input:focus {
   transform: rotateY( 180deg ) ;
   transition: transform 0.5s;
 }
+
+
+@keyframes rotate-text {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 5s linear infinite; /* Adjust the duration (4s) for slower animation */
+}

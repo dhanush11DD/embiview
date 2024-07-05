@@ -27,6 +27,10 @@
     }
 }
 
+.animate-spin-slow {
+    animation: spin 5s linear infinite; /* Adjust the duration (4s) for slower animation */
+  }
+
 /* text rotating end */
 
 .df{

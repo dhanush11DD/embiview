@@ -10,6 +10,7 @@ import { cn } from "../../utils/cn.js";
 import { Input } from "../../components/animation/text/input.jsx";
 import { TextArea } from "../../components/animation/text/textarea.jsx";
 import { Select } from "../../components/animation/text/select.jsx";
+// import { on } from "events";
 
 function CareerFormSection() {
   const form = useRef();
@@ -18,28 +19,48 @@ function CareerFormSection() {
     return /\S+@\S+\.\S+/.test(email);
   }
   const [content, setContent] = useState({
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: "",
+    address: "",
     mobile: '',
     message: ''
   })
+  const handleChange = (e) => {
+    setContent({ ...content, [e.target.name]: e.target.value })
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // emailjs
-    //   .sendForm("service_bcfn07v", "template_8j84yal", form.current, {
-    //     publicKey: "v2ZvBGbh4PNTlwJvw",
-    //   })
-    //   .then(
-    //     () => {
-    //       alert("SUCCESS!");
-    //     },
-    //     (error) => {
-    //       console.log("FAILED...", error.text);
-    //     }
-    //   );
-    alert("SUCCESS!");
+    if (content.first_name && content.last_name && content.email && content.mobile && content.message && content.address) {
+      if (!isValidEmail(content.email)) {
+        setError('Email is invalid');
+        alert('Email is invalid')
+      } else {
+        setError(null)
+        emailjs
+          .sendForm("service_bcfn07v", "template_8j84yal", form.current, {
+            publicKey: "v2ZvBGbh4PNTlwJvw",
+          })
+          .then(
+            () => {
+              alert("SUCCESS!");
+              setContent({
+                first_name: '',
+                last_name: '',
+                email: "",
+                mobile: '',
+                message: ''
+              })
+            },
+            (error) => {
+              console.log("FAILED...", error.text);
+            }
+          );
+      }
+    } else {
+      alert("fill all columns")
+    }
   };
 
   // Form configuration object
@@ -48,6 +69,7 @@ function CareerFormSection() {
       label: "First Name",
       type: "text",
       name: "first_name",
+      value: content.first_name,
       placeholder: "Enter First Name",
       className: "col-span-12 md:col-span-6",
     },
@@ -55,12 +77,14 @@ function CareerFormSection() {
       label: "Last Name",
       type: "text",
       name: "last_name",
+      value: content.last_name,
       placeholder: "Enter Last Name",
       className: "col-span-12 md:col-span-6",
     },
     {
       label: "Email Address",
       type: "email",
+      value: content.email,
       name: "email",
       placeholder: "Enter Email Address",
       className: "col-span-12 md:col-span-6",
@@ -69,12 +93,14 @@ function CareerFormSection() {
       label: "Mobile Number",
       type: "text",
       name: "mobile",
+      value: content.mobile,
       placeholder: "Enter Mobile Number",
       className: "col-span-12 md:col-span-6",
     },
     {
       label: "Address",
       type: "text",
+      value: content.address,
       name: "address",
       placeholder: "Enter Address",
       className: "col-span-12",
@@ -96,6 +122,7 @@ function CareerFormSection() {
     {
       label: "Message (Optional)",
       type: "textarea",
+      value: content.message,
       name: "message",
       placeholder: "Enter Your Message",
       className: "col-span-12",
@@ -120,7 +147,6 @@ function CareerFormSection() {
               <div className="text-primary text-2xl mt-1">
                 <Icon icon="ic:round-mail" />
               </div>
-
               <div className="flex flex-col col-span-1 gap-3">
                 {application.contact.emails.map((email, index) => (
                   <p className="text-default" key={index}>
@@ -153,6 +179,8 @@ function CareerFormSection() {
                   </label>
                   {field.type === "textarea" ? (
                     <TextArea
+                      onChange={handleChange}
+                      value={field.value}
                       name={field.name}
                       placeholder={field.placeholder}
                       className="border py-3 px-4 rounded-md"
@@ -163,16 +191,18 @@ function CareerFormSection() {
                   ) : field.type === "file" ? (
                     <div className="relative">
                       <Input
+                        onChange={handleChange}
+                        value={field.value}
                         type={field.type}
                         name={field.name}
                         className="border py-3 px-4 rounded-md pr-10"
                         placeholder={field.placeholder}
                       />
-                        <div className="absolute bg-primary text-white rounded-[6px] p-1.5 top-2 right-2">
+                      <div className="absolute bg-primary text-white rounded-[6px] p-1.5 top-2 right-2">
                         <Icon icon="icomoon-free:attachment"
-                        className="text-lg cursor-pointer"
-                      />
-                        </div>
+                          className="text-lg cursor-pointer"
+                        />
+                      </div>
                     </div>
                   ) : field.type === 'dropdown' ? (
                     <Select>
@@ -188,6 +218,8 @@ function CareerFormSection() {
 
                   ) : (
                     <Input
+                      onChange={handleChange}
+                      value={field.value}
                       type={field.type}
                       name={field.name}
                       placeholder={field.placeholder}

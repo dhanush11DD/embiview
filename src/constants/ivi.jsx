@@ -87,7 +87,7 @@ const technology = {
     listContent : [
         {
             img : npx,
-            title : "NPX",
+            title : "NXP",
             content: "Robust compatibility with NxP platforms, delivering high reliability and performance for diverse applications."
         },
         {
